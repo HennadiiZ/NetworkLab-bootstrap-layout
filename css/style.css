@@ -45,3 +45,14 @@ body{
    padding: 5px;
    border-radius: 3px;
 }
+
+/* EXPLORE HEAD */
+
+
+/* EXPLORE SECTION */
+#explore-section .fas, #share-section .fas{
+    color: #fff;
+    background: #333;
+    padding: 5px;
+    border-radius: 3px;
+}
