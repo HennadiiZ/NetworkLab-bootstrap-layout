@@ -39,10 +39,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>NetworkLab</title>
 </head>
-<body>
 
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
         <div class="container">
             <a href="index.html" class="navbar-brand">NetworkLab</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -387,6 +388,30 @@ crossorigin="anonymous"></script>
     $('#year').text(new Date().getFullYear());
     // <span id='year'></span>
 
+    //init Scrollspy
+    $('body').scrollspy({target: '#main-nav'}); 
+    // I dont actually need it here. It works perfectly fine without it
+
+
+        //add smooth scrolling
+        $('#main-nav a').on('click', function(e){
+      //check for hash value 
+      if(this.hash !== ''){
+        //Prevent default behavior
+        e.preventDefault();
+
+        // store hash
+        const hash = this.hash;
+
+        //Animate smooth scrolling
+        $('html, body').animate({
+           scrollTop: $(hash).offset().top
+        }, 100, function(){
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    })
 </script>
 
 <script src="js/script.js"></script>
