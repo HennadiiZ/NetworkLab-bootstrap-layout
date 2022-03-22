@@ -39,7 +39,7 @@ body{
     opacity: 0.8;
 }
 
-#home-section .fas{
+#home-section .fas, #create-section .fas{
    color: #008ed6;
    background: rgb(255, 255, 255);
    padding: 5px;
@@ -55,4 +55,25 @@ body{
     background: #333;
     padding: 5px;
     border-radius: 3px;
+}
+
+/* CREATE HEAD */
+
+
+/* CREATE SECTION */
+
+/* #create-section .fas{
+    color: #008ed6;
+    background: #fff;
+    padding: 5px;
+    border-radius: 3px;
+} */
+
+/* SHARE HEAD */
+
+
+/* SHARE SECTION */
+
+#share-head-section{
+  
 }
